@@ -1,0 +1,10 @@
+name 'bk_init'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures bk_init'
+long_description 'Installs/Configures bk_init'
+version '0.1.0'
+
+depends 'apt'
+depends 'bk_apache'
