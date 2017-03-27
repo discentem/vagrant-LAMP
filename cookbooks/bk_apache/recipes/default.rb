@@ -14,7 +14,6 @@ service "apache2" do
   action [:enable, :start]
 end
 
-
 #Virtual Hosts Files
 
 node["bk_apache"]["sites"].each do |sitename, data|
@@ -56,10 +55,10 @@ end
 
 #Apache Configuration
 
-template '/etc/apache2/apach2.conf' do
+template '/etc/apache2/apache2.conf' do
   source 'apache2.erb'
   mode "0644"
-  notifies :restart, "service[apache2]"
+  notifies :run, "service[apache2]"
 end
 
 execute "enable-event" do
