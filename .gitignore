@@ -1,2 +1,7 @@
 .kitchen/
 .kitchen.local.yml
+
+#packer
+
+packer/*.iso
+packer/packer_cache/*.iso
