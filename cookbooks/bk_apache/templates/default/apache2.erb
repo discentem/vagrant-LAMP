@@ -1,4 +1,0 @@
-<% render "apache2_original.erb" %>
-<% node.default["bk_apache"]["apache2.config"]["_extra_keys"].each do |key, data| %>
-  <%= key %> <%= data %>
-<% end %>

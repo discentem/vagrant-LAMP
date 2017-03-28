@@ -9,6 +9,7 @@ run_list = []
 run_list += [
   'apt',
   'bk_apache',
+  'bk_mysql'
 ]
 
 run_list.uniq.each do |recipe|

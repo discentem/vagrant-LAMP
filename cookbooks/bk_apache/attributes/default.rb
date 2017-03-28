@@ -5,7 +5,3 @@ default["bk_apache"]["sites"] = {
     "serveradmin" => "kurtz.brandon@gmail.com"
   }
 }
-
-default["bk_apache"]["apache2.config"]["_extra_keys"] = {
-  'KeepAlive' => 'Off'
-}

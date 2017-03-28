@@ -19,6 +19,7 @@ end
 node["bk_apache"]["sites"].each do |sitename, data|
 
   document_root = "/var/www/html/#{sitename}"
+
   directory document_root do
     mode "0755"
     recursive true
@@ -42,24 +43,13 @@ node["bk_apache"]["sites"].each do |sitename, data|
     notifies :restart, "service[apache2]"
   end
 
-  directory "/var/www/html/#{sitename}/public_html" do
-    action :create
-  end
-
   directory "/var/www/html/#{sitename}/logs" do
     action :create
   end
 
 end
 
-
 #Apache Configuration
-
-template '/etc/apache2/apache2.conf' do
-  source 'apache2.erb'
-  mode "0644"
-  notifies :run, "service[apache2]"
-end
 
 execute "enable-event" do
   command "a2enmod mpm_event"
