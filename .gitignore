@@ -1,12 +1,9 @@
+#kitchen
+
 .kitchen/
 .kitchen.local.yml
 
 #packer
 packer/*.iso
 packer/packer_cache/*.iso
-
-packer/output-virtualbox-iso
-packer/output-virtualbox-iso/*.vdi
-
-packer/output-hyperv-iso
-packer/output-hyperv-iso/*.vdi
+packer/output/*
