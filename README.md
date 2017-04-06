@@ -9,11 +9,10 @@ I wanted full control over the stack and to give myself and other students the a
 Provide an easy, automated way to create/tear-down/customize a LAMP stack.
 
 ## Dependencies
-1. https://www.vagrantup.com/
-Vagrant must be installed. Vagrant is available for all major operating systems.
-
-2. https://www.virtualbox.org/wiki/VirtualBox
-The current Vagrant box (`config.vm.box`) defined in the Vagrantfile (`./Vagrantfile`) is only compatible with `Virtualbox`. Search https://atlas.hashicorp.com/ if you need a box which runs on another provider. For example, you can replace `hashicorp/precise64` with `luderson/ubuntu-1604-hyperv` for a Hyper-v compatible box.
+1. https://git-scm.com/
+2. https://www.vagrantup.com/
+3. https://www.virtualbox.org/wiki/VirtualBox
+The current Vagrant box (`config.vm.box`) defined in the Vagrantfile (`./Vagrantfile`) is only compatible with `Virtualbox`. If you need to use this project with Hyper-v, run `git checkout hyper-v` prior to usage.
 
 For information on what a box is, visit https://www.vagrantup.com/docs/boxes.html.
 
