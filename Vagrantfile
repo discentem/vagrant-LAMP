@@ -10,11 +10,10 @@ Vagrant.configure("2") do |config|
 
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
+  disable_shared_folders = false
+
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "2048"
-  end
-  config.vm.provider "hyperv" do |hv|
-    hv.memory = "2048"
   end
 
   config.vm.provision "chef_solo" do |chef|
