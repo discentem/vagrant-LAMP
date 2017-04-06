@@ -13,7 +13,6 @@ Use Vagrant and Chef to provide an easy/automated way to create/tear-down/custom
 2. https://www.virtualbox.org/wiki/VirtualBox
 
 The current Vagrant box (`config.vm.box`) defined in the Vagrantfile (`./Vagrantfile`) is only compatible with `Virtualbox`. Search https://atlas.hashicorp.com/ if you need a box which runs on another provider.
-
 For example, you can replace `hashicorp/precise64` with `luderson/ubuntu-1604-hyperv` for a Hyper-v compatible box.
 
 For information on what a box is, visit https://www.vagrantup.com/docs/boxes.html.
@@ -22,7 +21,11 @@ For information on what a box is, visit https://www.vagrantup.com/docs/boxes.htm
 
 1. Clone or download this repository.
 2. Advised: You should change the default MySQL password in `/Users/Brandon/Documents/vagrant-lamp/cookbooks/bk_mysql/attributes/default.rb` before running this virtual machine.
-3. Next, inside of the project root, run `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
+3. If you are using Hyper-v, replace `C:\HashiCorp\Vagrant\embedded\gems\gems\vagrant-1.9.3\plugins\providers\hyperv\scripts\import_vm_xml.ps1` with the `import_vm_xml.ps1` file found in this project root.
+
+4. Next, inside of the project root, run `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
+
+
 
 ## Development
 
