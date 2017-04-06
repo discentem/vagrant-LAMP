@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
-  config.vm.box = "luderson/ubuntu-1604-hyperv"
+  config.vm.box = "hashicorp/precise64"
   config.vm.box_check_update = false
 
   config.vm.network "forwarded_port", guest: 80, host: 8080
