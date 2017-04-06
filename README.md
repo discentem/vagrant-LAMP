@@ -19,9 +19,11 @@ For information on what a box is, visit https://www.vagrantup.com/docs/boxes.htm
 
 ## Usage
 
-Advised: You should change the default MySQL password in `/Users/Brandon/Documents/vagrant-lamp/cookbooks/bk_mysql/attributes/default.rb` before running this virtual machine.
+1. Clone or download this repository.
 
-Clone or download this repository. Next, inside of the project root, run `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
+2. Advised: You should change the default MySQL password in `/Users/Brandon/Documents/vagrant-lamp/cookbooks/bk_mysql/attributes/default.rb` before running this virtual machine.
+
+3. Next, inside of the project root, run `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
 
 ## Development
 
