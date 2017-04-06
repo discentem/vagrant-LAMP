@@ -12,7 +12,7 @@ Use Vagrant and Chef to provide an easy/automated way to create/tear-down/custom
 1. https://git-scm.com/
 2. https://www.vagrantup.com/
 3. https://www.virtualbox.org/wiki/VirtualBox
-The current Vagrant box (`config.vm.box`) defined in the Vagrantfile (`./Vagrantfile`) is only compatible with `Virtualbox`. If you need to use this project with Hyper-v, run `git checkout hyper-v` prior to usage. This will ensure Vagrant uses a Vagrantfile compatible with Hyper-v.
+The current Vagrant box (`config.vm.box`) defined in the Vagrantfile (`./Vagrantfile`) is only compatible with `Virtualbox`. If you need to use this project with Virtualbox, run `git checkout master` prior to usage. This will ensure Vagrant uses a Vagrantfile compatible with VirtualBox.
 
 For information on what a box is, visit https://www.vagrantup.com/docs/boxes.html.
 

@@ -9,6 +9,9 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
 
   config.vm.network "forwarded_port", guest: 80, host: 8080
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "2048"
   config.vm.provider "hyperv" do |hv|
     hv.memory = "2048"
   end
