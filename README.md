@@ -13,7 +13,7 @@ Provide an easy, automated to create/tear-down/customize a LAMP stack.
 Vagrant must be installed. Vagrant is available for all major operating systems.
 
 2. https://www.virtualbox.org/wiki/VirtualBox
-Current the Vagrant box (`config.vm.box`) defined in the Vagrantfile (`./Vagrantfile`) is only compatible with `Virtualbox`. Search https://atlas.hashicorp.com/ if you need a box which runs on another provider. For example, you can replace `hashicorp/precise64` with `luderson/ubuntu-1604-hyperv` for a Hyper-v compatible box.
+The current Vagrant box (`config.vm.box`) defined in the Vagrantfile (`./Vagrantfile`) is only compatible with `Virtualbox`. Search https://atlas.hashicorp.com/ if you need a box which runs on another provider. For example, you can replace `hashicorp/precise64` with `luderson/ubuntu-1604-hyperv` for a Hyper-v compatible box.
 
 For information on what a box is, visit https://www.vagrantup.com/docs/boxes.html.
 
