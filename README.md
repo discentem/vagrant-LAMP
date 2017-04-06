@@ -4,17 +4,23 @@ Students in my INFS-375 Database Programming class currently have access to a LA
 
 I wanted full control over the stack and to give myself and other students the ability to see behind the curtain, mess up, tear the server down, and to easily get running again.
 
-For those students who don't want to dig deep, this provides a localized, working LAMP stack just the same.
+## Solution
 
-## Solution -- In Development
+Provide an easy, automated to create/tear-down/customize a LAMP stack.
 
-An automated way to create/tear-down/customize a LAMP using
+## Dependencies
+1. https://www.vagrantup.com/
+Vagrant must be installed. Vagrant is available for all major operating systems.
 
-1. https://www.packer.io/
-2. https://www.vagrantup.com/
-3. https://www.chef.io/
+2. https://www.virtualbox.org/wiki/VirtualBox
+Current the Vagrant box (`config.vm.box`) defined in the Vagrantfile (`./Vagrantfile`) is only compatible with `Virtualbox`. Search https://atlas.hashicorp.com/ if you need a box which runs on another provider. For example, you can replace `hashicorp/precise64` with `luderson/ubuntu-1604-hyperv` for a Hyper-v compatible box.
 
-## Goals
+For information on what a box is, visit https://www.vagrantup.com/docs/boxes.html.
 
-1. Get buy-in to install these tools on the classroom computers
-2. Give my code to the professor to use in future classes
+## Usage
+
+Clone or download this repository. Next, inside of the project root, run `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
+
+## Development
+
+If you would like to make major changes to the Chef code, found in `./cookbooks`, visit install Ruby (https://www.ruby-lang.org/en/downloads/) and `test-kitchen` (https://github.com/test-kitchen/test-kitchen). Chef changes are easier and faster to test inside `test-kitchen`. I've included a `.kitchen.yml` which configures `test-kitchen` with some useful options.

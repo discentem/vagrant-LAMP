@@ -7,3 +7,6 @@
 packer/*.iso
 packer/packer_cache/*.iso
 packer/output/*
+
+#vagrant
+.vagrant/*
