@@ -6,7 +6,7 @@ I wanted full control over the stack and to give myself and other students the a
 
 ## Solution
 
-Provide an easy, automated to create/tear-down/customize a LAMP stack.
+Provide an easy, automated way to create/tear-down/customize a LAMP stack.
 
 ## Dependencies
 1. https://www.vagrantup.com/
