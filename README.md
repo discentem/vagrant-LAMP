@@ -18,6 +18,7 @@ Use Vagrant and Chef to provide an easy/automated way to create/tear-down/custom
 1. Clone or download this repository.
 2. Advised: You should change the default MySQL password in `/Users/Brandon/Documents/vagrant-lamp/cookbooks/bk_mysql/attributes/default.rb` before running this virtual machine.
 3. Next, inside of the project root, run `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
+4. Profit! You should now have a Ubuntu virtual machine running a LAMP stack. You can ssh to it with `vagrant ssh`. Your website should be accessible at `localhost:8080`. 
 
 ## Development
 
