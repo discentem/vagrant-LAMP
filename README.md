@@ -19,9 +19,11 @@ For information on what a box is, visit https://www.vagrantup.com/docs/boxes.htm
 
 ## Usage
 
-1. Clone or download this repository.
+Note: All paths referenced in the following instructions are relative to the root of this project.
 
-2. Advised: You should change the default MySQL password in `/Users/Brandon/Documents/vagrant-lamp/cookbooks/bk_mysql/attributes/default.rb` before running this virtual machine.
+1. Clone this repository by running `git clone https://github.com/discentem/vagrant-lamp.git` or download it by clicking `Clone or Download` and `Download Zip`. You will need to extract the project if downloading a zip.
+
+2. Advised: You should change the default MySQL password in `cookbooks/bk_mysql/attributes/default.rb` before running this virtual machine.
 
 3. Next, inside of the project root, run `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
 
