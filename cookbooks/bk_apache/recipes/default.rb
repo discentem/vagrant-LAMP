@@ -25,13 +25,9 @@ node["bk_apache"]["sites"].each do |sitename, data|
     recursive true
   end
 
-  execute "enable-sites" do
-    command "a2ensite #{sitename}"
-    action :nothing
-  end
-
-  template "/etc/apache2/sites-available/#{sitename}.conf" do
+  template "#{sitename}" do
     source "virtualhosts.erb"
+    path "/etc/apache2/sites-available/#{sitename}.conf"
     mode "0644"
     variables(
       :document_root => document_root,
@@ -41,6 +37,11 @@ node["bk_apache"]["sites"].each do |sitename, data|
     )
     notifies :run, "execute[enable-sites]"
     notifies :restart, "service[apache2]"
+  end
+
+  execute "enable-sites" do
+    command "a2ensite #{sitename}.conf"
+    action :nothing
   end
 
   directory "/var/www/html/#{sitename}/logs" do
@@ -59,5 +60,5 @@ end
 cookbook_file "/etc/apache2/mods-available/mpm_event.conf" do
   source "mpm_event.conf"
   mode "0644"
-  notifies :run, "execute[enable-event]"
+  # notifies :run, "execute[enable-event]"
 end

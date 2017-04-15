@@ -14,12 +14,16 @@ Use Vagrant and Chef to provide an easy/automated way to create/tear-down/custom
 3. https://www.virtualbox.org/wiki/VirtualBox
 
 ## Usage
-Note: All paths referenced in the following instructions are relative to the root of this project.
+Note: *All paths referenced in the following instructions are relative to the root of this project.* Therefore, keep track of where you clone or save the project.
 
-1. Clone this repository by running `git clone https://github.com/discentem/vagrant-lamp.git` or download it by clicking `Clone or Download` and `Download Zip`. You will need to extract the project if downloading a zip.
+1. Clone this repository by running the following command in `Terminal` (if on macOS) or `Powershell` (if on Windows):`git clone https://github.com/discentem/vagrant-lamp.git`.
+
+Alternatively, you can download the project by clicking `Clone or Download` and `Download Zip`. You will need to extract the project if downloading the project as a zip file.
+
 2. Advised: You should change the default MySQL password in `cookbooks/bk_mysql/attributes/default.rb` before running this virtual machine.
-3. Next, inside of the project root, run `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
-4. Profit! You should now have a Ubuntu virtual machine running a LAMP stack. You can ssh to it with `vagrant ssh`. Your website should be accessible at `localhost:8080`.
+3. Next, launch `Terminal` (if on macOS) or `Powershell` (if on Windows) and navigate to the project root. If your copy of the project is stored in your downloads, for instance, you can run the following to navigate to the project root: `cd ~/Downloads/vagrant-lamp`.
+4. Run the following command from the project directory: `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
+5. Profit! You should now have a Ubuntu virtual machine running a LAMP stack. You can ssh to it with `vagrant ssh`. Your website should be accessible at `localhost:8080`. You can edit files 
 
 ## Development
 
