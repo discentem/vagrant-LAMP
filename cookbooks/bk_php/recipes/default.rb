@@ -4,12 +4,16 @@
 #
 # Copyright (c) 2017 The Authors, All Rights Reserved.
 
-packages = %w(php5 php-pear php-mysql)
-
-packages.each do |pkg|
+node['bk_php']['packages'].each do |pkg|
   package pkg do
     action :install
   end
+end
+
+template "/etc/apache2/mods-enabled/php5.conf" do
+  source "php5.erb"
+  mode "0644"
+  notifies :restart, "service[apache2]"
 end
 
 cookbook_file "/etc/php5/apache2/php.ini" do

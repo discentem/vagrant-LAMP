@@ -23,7 +23,10 @@ Alternatively, you can download the project by clicking `Clone or Download` and 
 2. Advised: You should change the default MySQL password in `cookbooks/bk_mysql/attributes/default.rb` before running this virtual machine.
 3. Next, launch `Terminal` (if on macOS) or `Powershell` (if on Windows) and navigate to the project root. If your copy of the project is stored in your downloads, for instance, you can run the following to navigate to the project root: `cd ~/Downloads/vagrant-lamp`.
 4. Run the following command from the project directory: `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
-5. Profit! You should now have a Ubuntu virtual machine running a LAMP stack. You can ssh to it with `vagrant ssh`. Your website should be accessible at `localhost:8080`. You can edit files 
+5. Profit! You should now have a Ubuntu virtual machine running a LAMP stack. You can ssh to it with `vagrant ssh`. Your website should be accessible in a web browser `localhost:8080`.
+
+- You can ssh or sftp to `localhost:2222` in order to update the web files.
+- From the server, you can access `mysql` with the following command: `sudo mysql -h 127.0.0.1 -p`.
 
 ## Development
 
