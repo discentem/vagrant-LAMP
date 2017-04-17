@@ -8,12 +8,12 @@ I wanted full control over the stack and to give myself and other students the a
 
 Use Vagrant and Chef to provide an easy/automated way to create/tear-down/customize a LAMP stack.
 
-## Dependencies
+## Dependencies: You must install the following software before *Getting Started*.
 1. https://git-scm.com/
 2. https://www.vagrantup.com/
 3. https://www.virtualbox.org/wiki/VirtualBox
 
-## Usage
+## Getting Started
 Note: *All paths referenced in the following instructions are relative to the root of this project.* Therefore, keep track of where you clone or save the project.
 
 1. Clone this repository by running the following command in `Terminal` (if on macOS) or `Powershell` (if on Windows):`git clone https://github.com/discentem/vagrant-lamp.git`.
@@ -28,6 +28,8 @@ Alternatively, you can download the project by clicking `Clone or Download` and 
 - You can ssh or sftp to server at `localhost:2222` with username:`vagrant` and password:`vagrant`. The website files will be found at `/var/www/*`.
 - From the server, you can access `mysql` with the following command: `sudo mysql -h 127.0.0.1 -p`. The default sql password is `mysqldefault`.
 
-## Development
+## Contributing/Development
 
-If you would like to make major changes to the Chef code, found in `./cookbooks`, install `Ruby` (https://www.ruby-lang.org/en/downloads/) and `test-kitchen` (https://github.com/test-kitchen/test-kitchen). Chef changes are easier and faster to test inside `test-kitchen`. I've included a `.kitchen.yml` which configures `test-kitchen` with some useful options.
+If you would like to make major changes to the Chef code found in the project, mostly found in `./cookbooks`, install `Ruby` (https://www.ruby-lang.org/en/downloads/) and `test-kitchen` (https://github.com/test-kitchen/test-kitchen). Chef changes are easier and faster to test inside `test-kitchen`. I've included a `.kitchen.yml` which configures `test-kitchen` with some useful options.
+
+Pull requests are welcome.
