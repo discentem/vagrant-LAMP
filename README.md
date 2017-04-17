@@ -25,8 +25,8 @@ Alternatively, you can download the project by clicking `Clone or Download` and 
 4. Run the following command from the project directory: `vagrant up`. This will create a virtual machine as defined by the code in `./Vagrantfile`.
 5. Profit! You should now have a Ubuntu virtual machine running a LAMP stack. You can ssh to it with `vagrant ssh`. Your website should be accessible in a web browser `localhost:8080`.
 
-- You can ssh or sftp to `localhost:2222` in order to update the web files. The files will be found at `/var/www/*`.
-- From the server, you can access `mysql` with the following command: `sudo mysql -h 127.0.0.1 -p`. The default password is `mysqldefault`.
+- You can ssh or sftp to server at `localhost:2222` with username:`vagrant` and password:`vagrant`. The website files will be found at `/var/www/*`.
+- From the server, you can access `mysql` with the following command: `sudo mysql -h 127.0.0.1 -p`. The default sql password is `mysqldefault`.
 
 ## Development
 
