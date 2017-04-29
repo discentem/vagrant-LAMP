@@ -10,12 +10,10 @@ package "apache2" do
   action :install
 end
 
-%w(/var/www /var/www/html).each do |dir|
-  directory dir do
-    owner "vagrant"
-    mode "777"
-    action :create
-  end
+directory "/var/www/" do
+  owner "vagrant"
+  mode "777"
+  action :create
 end
 
 service "apache2" do
@@ -30,7 +28,7 @@ node["bk_apache"]["sites"].each do |sitename, data|
 
   directory document_root do
     owner "vagrant"
-    mode "777"
+    mode "0755"
     recursive true
   end
 
