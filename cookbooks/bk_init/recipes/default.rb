@@ -10,7 +10,8 @@ run_list += [
   'apt',
   'bk_apache',
   'bk_mysql',
-  'bk_php'
+  'bk_php',
+
 ]
 
 run_list.uniq.each do |recipe|

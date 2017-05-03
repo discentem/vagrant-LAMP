@@ -6,5 +6,6 @@
         ErrorLog <%= @document_root %>/logs/error.log
         <Directory <%= @document_root %>>
                 Require all granted
+                Allow from 127.0.0.1
         </Directory>
 </VirtualHost>

@@ -16,9 +16,12 @@ template "/etc/apache2/mods-enabled/php5.conf" do
   notifies :restart, "service[apache2]"
 end
 
-cookbook_file "/etc/php5/apache2/php.ini" do
-  source "php.ini"
+template "/etc/php5/apache2/php.ini" do
+  source "php.ini.erb"
   mode "0644"
+  variables(
+    :mysql_service_name => node['bk_mysql']['mysql_service'],
+  )
   notifies :restart, "service[apache2]"
 end
 

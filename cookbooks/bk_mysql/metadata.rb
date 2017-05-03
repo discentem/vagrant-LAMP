@@ -7,3 +7,4 @@ long_description 'Installs/Configures bk_mysql'
 version '0.1.0'
 
 depends 'mysql'
+depends 'line'
